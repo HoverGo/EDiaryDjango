@@ -1,0 +1,35 @@
+body {
+    font-family: Open Sans;
+}
+
+a {
+    text-decoration: none;
+}
+
+header .header nav a {
+    font-size: 20px;    
+    line-height: 19px;
+    color: grey;
+    padding-bottom: 7px;
+    border-bottom: 1px solid transparent;
+    transition: 0.5s all ease;
+}
+
+header .header nav a:hover {
+    color: yellowgreen;
+    border-bottom: 1px solid;
+}
+
+header .header div a {
+    font-size: 20px;    
+    line-height: 19px;
+    color: grey;
+    padding-bottom: 7px;
+    border-bottom: 1px solid transparent;
+    transition: 0.5s all ease;
+}
+
+header .header div a:hover {
+    color: yellowgreen;
+    border-bottom: 1px solid;
+}
