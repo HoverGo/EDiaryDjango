@@ -1,0 +1,15 @@
+{% extends "main/layout.html" %}
+
+{% block title %}Новости{% endblock %}
+
+{% block main %}
+{% for el in news %}
+    <div class="features">
+        <h1>{{ el.name }}</h1>
+
+        <p>{{ el.title }}</p>
+        <button class="btn btn-success">Подробнее...</button>
+    </div>
+    {% endfor %}
+
+{% endblock %}
