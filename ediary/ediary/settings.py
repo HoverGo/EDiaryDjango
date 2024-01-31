@@ -27,6 +27,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # local
     "main",
+    "news",
+    "users",
+    "evaluations",
 ]
 
 MIDDLEWARE = [
@@ -44,7 +47,9 @@ ROOT_URLCONF = "ediary.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            BASE_DIR / "templates",
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -116,4 +121,4 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = "main.User"
+AUTH_USER_MODEL = "users.User"

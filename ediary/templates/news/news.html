@@ -1,4 +1,4 @@
-{% extends "main/layout.html" %}
+{% extends "layout.html" %}
 
 {% block title %}Новости{% endblock %}
 
@@ -9,7 +9,11 @@
 
         <p>{{ el.title }}</p>
         <button class="btn btn-success">Подробнее...</button>
-    </div>
+
+        
+    
     {% endfor %}
+    <br><a href="add/"><button class="add__btn btn btn-warning">Добавить новую статью</button></a>
+    </div>
 
 {% endblock %}

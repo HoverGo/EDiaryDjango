@@ -51,6 +51,10 @@ main .features {
     text-align: center;
 }
 
+main .features .add__btn {
+    margin-top: 150px;
+}
+
 main .schedule h1 {
     text-align: center;
 }

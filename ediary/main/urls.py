@@ -1,12 +1,12 @@
 from django.urls import path
-from . import views
+from .views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path("", views.index, name="main"),
-    path("news/", views.news, name="news"),
-    path("about/", views.about, name="about"),
-    path("schedule/", views.schedule, name="schedule"),
+    # Info pages
+    path("", index, name="main"),
+    path("about/", about, name="about"),
+    path("schedule/", schedule, name="schedule"),
 ]
