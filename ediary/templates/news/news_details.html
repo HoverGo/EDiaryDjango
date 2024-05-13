@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}{% endblock %}
+
+{% block main %}
+    <div class="features">
+        <h1>{{ news.name }}</h1>
+
+        <h2>{{ news.title }}</h2>
+        <br>
+        <p>{{ news.text }}</p>
+        <a href="/news/"><button class="btn btn-warning">Назад</button></a>
+        <a href="delete/"><button class="btn btn-danger">Удалить статью</button></a>
+    </div>
+{% endblock %}

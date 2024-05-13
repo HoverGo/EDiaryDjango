@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
-from .models import *
 from .forms import *
+from .services.services import get_all_news, get_one_news, delete_one_news
 
 
 def news(request):
-    news_data = {}
-    news = News.objects.all()
-    news_data["news"] = news
-    return render(request, "news/news.html", news_data)
+    data = {}
+    data["news"] = get_all_news()
+    print(data)
+    return render(request, "news/news.html", data)
 
 
 def news_add(request):
@@ -27,3 +27,15 @@ def news_add(request):
         "error": error,
     }
     return render(request, "news/news_add.html", data)
+
+
+def news_details(request, id):
+    data = {}
+    data["news"] = get_one_news(id)
+    print(data)
+    return render(request, "news/news_details.html", data)
+
+
+def news_delete(request, id):
+    delete_one_news(id)
+    return redirect("news")
