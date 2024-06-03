@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}{% endblock %}
+{% block title %}{{ title }}{% endblock title %}
 
 {% block main %}
     <div class="features">
@@ -12,4 +12,4 @@
         <a href="/news/"><button class="btn btn-warning">Назад</button></a>
         <a href="delete/"><button class="btn btn-danger">Удалить статью</button></a>
     </div>
-{% endblock %}
+{% endblock main %}

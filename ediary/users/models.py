@@ -45,6 +45,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     password = models.CharField(
         max_length=25,
+        editable=False,
         validators=[
             RegexValidator(
                 regex=r"^[A-Za-z\d!@#$%^&*()_+]+$",
@@ -53,6 +54,7 @@ class User(AbstractBaseUser, PermissionsMixin):
             ),
         ],
     )
+    email = models.EmailField(unique=True, null=True, blank=True)
     num_class = models.IntegerField(
         null=True,
         blank=True,

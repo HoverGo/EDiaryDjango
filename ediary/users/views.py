@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .services.services import login
 
-# Create your views here.
+
+def users_login(request):
+    data = {}
+    return render(request, "users/users_login.html", data)

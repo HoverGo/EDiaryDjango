@@ -4,12 +4,21 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "main/index.html")
+    data = {
+        "title": "Главная страница",
+    }
+    return render(request, "main/index.html", data)
 
 
 def about(request):
-    return render(request, "main/about.html")
+    data = {
+        "title": "Про нас",
+    }
+    return render(request, "main/about.html", data)
 
 
 def schedule(request):
-    return render(request, "main/schedule.html")
+    data = {
+        "title": "Расписание",
+    }
+    return render(request, "main/schedule.html", data)
