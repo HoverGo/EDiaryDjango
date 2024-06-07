@@ -4,6 +4,10 @@ from .services.services import get_all_news, get_one_news, delete_one_news
 
 
 def news(request):
+    """
+    Вывод всех новостей из базы данных на страницу
+
+    """
     data = {}
     data["title"] = "Новости"
     data["news"] = get_all_news()
@@ -32,6 +36,10 @@ def news_add(request):
 
 
 def news_details(request, id):
+    """
+    Обработка страницы с конкретной новостью
+
+    """
     data = {}
     news = get_one_news(id)
     data["title"] = news.name

@@ -46,13 +46,32 @@ main .container {
     min-height: 100vh;
 }
 
+main .container .users_login {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 50px 10px;
+    width: 350px;
+    margin: 100px auto;
+}
+
+main .container .users_login .login_form {
+    margin: 0 auto;
+}
+
 main .features {
     padding: 10px 0 10px;
     text-align: center;
 }
 
-main .features .add__btn {
+main .container .add_news {
     margin-top: 150px;
+}
+
+main .container .add_news .add_btn {
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
 }
 
 main .schedule h1 {

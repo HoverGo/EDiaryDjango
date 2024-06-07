@@ -8,21 +8,21 @@ from django.core.validators import MinValueValidator, MaxValueValidator, RegexVa
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, username, password):
-        if username is None:
-            raise TypeError("Users must have a username")
+    def create_user(self, email, password):
+        if email is None:
+            raise TypeError("Users must have a email")
 
         if password is None:
             raise TypeError("Users must have a password")
 
-        user = self.model(username=username)
+        user = self.model(email=email)
         user.set_password(password)
         user.save()
 
         return user
 
-    def create_superuser(self, username, password):
-        user = self.create_user(username, password)
+    def create_superuser(self, email, password):
+        user = self.create_user(email, password)
         user.is_superuser = True
         user.is_staff = True
         user.save()
@@ -31,17 +31,9 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(
-        max_length=50,
-        unique=True,
-        validators=[
-            RegexValidator(
-                regex=r"^[a-zA-Z0-9][a-zA-Z0-9_]*$",
-                message=("Invalid username"),
-                code="invalid_username",
-            ),
-        ],
-    )
+    name = models.CharField(max_length=50, null=True, blank=True)
+    
+    surname = models.CharField(max_length=50, null=True, blank=True)
 
     password = models.CharField(
         max_length=25,
@@ -69,9 +61,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
 
-    USERNAME_FIELD = "username"
+    USERNAME_FIELD = "email"
 
     objects = UserManager()
 
     def __str__(self):
-        return self.username
+        return self.email
