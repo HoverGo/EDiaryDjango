@@ -3,6 +3,26 @@
 {% block title %}{% endblock title %}
 
 {% block main %}
+    <div class="users_registration">
+        <form class="registration_form" method="post">
+            {% csrf_token %}
 
+            <div class="mb-3">
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                {{ form.password1 }}
+            </div>
+            <div class="mb-3">
+                {{ form.password2 }}
+            </div>
+            <div class="red-text">
+                {{ form_error }}
+            </div>
+
+
+            <div class="text-center"><button type="submit" class="btn btn-success mt-3 w-100">Register</button></div>
+        </form>
+    </div>
 {% endblock main %}
 
