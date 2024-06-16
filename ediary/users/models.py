@@ -47,15 +47,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         ],
     )
     email = models.EmailField(unique=True, null=True, blank=True)
-    num_class = models.IntegerField(
-        null=True,
-        blank=True,
-        validators=[
-            MinValueValidator(1),
-            MaxValueValidator(11),
-        ],
-    )
-    letter_class = models.CharField(max_length=1, null=True, blank=True)
     profile_img = models.ImageField(blank=True, null=True)
 
     is_staff = models.BooleanField(default=False)
