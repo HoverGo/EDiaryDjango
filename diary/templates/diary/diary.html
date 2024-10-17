@@ -10,13 +10,11 @@
         </div>
         <div class="columns-3">
             {% for record in records %}
-                {% if forloop.counter|divisibleby:3 and not forloop.first %}
+                <a class="item_columns" href="{{ record.id }}/">
+                    <div >
+                        <h1>{{ record.name }}</h1>
                     </div>
-                    <div class="columns-3">
-                {% endif %}
-                <div class="item_columns">
-                    <h1>{{ record.name }}</h1>
-                </div>
+                </a>
             {% endfor %}
         </div>
     {% else %}
