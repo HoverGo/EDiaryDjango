@@ -3,6 +3,7 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block main %}
+<div class="add_news"><a href="add/" class="add_btn"><button class="add_btn btn btn-warning">Добавить новую статью</button></a></div>
 {% for el in news %}
     <div class="features">
         <h1>{{ el.name }}</h1>
@@ -15,6 +16,6 @@
     
     </div>
     {% endfor %}
-    <div class="add_news"><a href="add/" class="add_btn"><button class="add_btn btn btn-warning">Добавить новую статью</button></a></div>
+    
 
 {% endblock %}

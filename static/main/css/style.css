@@ -46,7 +46,7 @@ main .container {
     min-height: 100vh;
 }
 
-main .container .users_login {
+main .users_login {
     display: flex;
     align-items: center;
     border: 1px solid black;
@@ -55,7 +55,7 @@ main .container .users_login {
     margin: 100px auto;
 }
 
-main .container .users_registration {
+main .users_registration {
     display: flex;
     align-items: center;
     border: 1px solid black;
@@ -64,11 +64,11 @@ main .container .users_registration {
     margin: 100px auto;
 }
 
-main .container .users_login .login_form {
+main .users_login .login_form {
     margin: 0 auto;
 }
 
-main .container .users_registration .registration_form {
+main .users_registration .registration_form {
     margin: 0 auto;
 }
 
@@ -77,11 +77,11 @@ main .features {
     text-align: center;
 }
 
-main .container .add_news {
+main .add_news {
     margin-top: 150px;
 }
 
-main .container .add_news .add_btn {
+main .add_news .add_btn {
     display: flex;
     justify-content: center;
     margin:0 auto;
@@ -91,6 +91,44 @@ main .schedule h1 {
     text-align: center;
 }
 
+main .columns-3 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 75%;
+    min-height: 150px;
+}
+
+main .columns-3 .item_columns {
+    vertical-align: top;
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+}
+
+main .add_diary_record {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+main .columns-3 .item_columns h1 {
+    font-size: 25px;
+}
+
+main .need_authenticate {
+    text-align: center;
+}
+
+main .need_authenticate h1 {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+main .need_authenticate h2 {
+    font-size: 19px;
+}
 
 footer {
     background-color: rgb(95, 93, 91);
@@ -109,5 +147,4 @@ footer div figcaption{
     padding-top: 15px;
 
     color: black;
-
 }

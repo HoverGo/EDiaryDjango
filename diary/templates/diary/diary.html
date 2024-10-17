@@ -4,5 +4,25 @@
 
 
 {% block main %}
-
+    {% if user.is_authenticated %}
+        <div class="add_diary_record">
+            <a href="add/" class="add_btn"><button class="add_btn btn btn-warning">Добавить новую запись в дневник</button></a>
+        </div>
+        <div class="columns-3">
+            {% for record in records %}
+                {% if forloop.counter|divisibleby:3 and not forloop.first %}
+                    </div>
+                    <div class="columns-3">
+                {% endif %}
+                <div class="item_columns">
+                    <h1>{{ record.name }}</h1>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="need_authenticate">
+            <h1>Для использования данного функционала необходима авторизация</h1>
+            <h2><a href="/users/login/">Авторизация</a></h2>
+        </div>
+    {% endif %}
 {% endblock main %}

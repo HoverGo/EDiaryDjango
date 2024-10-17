@@ -5,9 +5,9 @@ from .models import DiaryRecord
 class DiaryRecordForm(forms.ModelForm):
     class Meta:
         model = DiaryRecord
-        fields = "__all__"
+        fields = ("name", "text")
 
         widgets = {
-            'name': forms.TextInput(attrs={"placeholder": "Название записи"}),
-            'text': forms.TextInput(attrs={"placeholder": "Текст записи"})
+            'name': forms.TextInput(attrs={"class": "form-control", "placeholder": "Название записи"}),
+            'text': forms.TextInput(attrs={"class": "form-control", "placeholder": "Текст записи"})
         }
