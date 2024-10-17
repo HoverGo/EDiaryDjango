@@ -22,3 +22,7 @@ def schedule(request):
         "title": "Расписание",
     }
     return render(request, "main/schedule.html", data)
+
+
+def page_not_found(request, exception):
+    render(request, "404.html", status=404)
