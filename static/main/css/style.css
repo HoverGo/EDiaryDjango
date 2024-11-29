@@ -91,9 +91,9 @@ main .features {
     text-align: center;
 }
 
-main .add_news {
-    margin-top: 150px;
-}
+/* main .add_news {
+    margin-top: 75px;
+} */
 
 main .add_news .add_btn {
     display: flex;
