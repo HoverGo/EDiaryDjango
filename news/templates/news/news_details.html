@@ -1,6 +1,14 @@
 {% extends "layout.html" %}
 
 {% block title %}{{ title }}{% endblock title %}
+{% block description %}
+    Подробности статьи "{{ news.title }}". Узнайте больше о содержании этой новости.
+{% endblock description %}
+
+{% block keywords %}
+    новость, статья, удаление статьи, новости сайта, контент, информация
+{% endblock keywords %}
+
 
 {% block main %}
     <div class="features">

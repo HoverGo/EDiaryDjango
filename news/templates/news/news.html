@@ -1,6 +1,15 @@
 {% extends "layout.html" %}
 
 {% block title %}{{ title }}{% endblock %}
+{% block description %}
+    Просматривайте последние новости и статьи на нашем сайте. Узнайте подробности о каждом материале.
+{% endblock description %}
+
+{% block keywords %}
+    новости, статьи, добавление статьи, последние новости, актуальные новости, сайт новостей
+{% endblock keywords %}
+
+
 
 {% block main %}
 <div class="add_news"><a href="add/" class="add_btn"><button class="add_btn btn btn-warning">Добавить новую статью</button></a></div>
