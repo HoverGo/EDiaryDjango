@@ -1,0 +1,8 @@
+ROBOTS.TXT
+
+User-agent: *
+Disallow: /admin
+Disallow: /users*
+Disallow: /diary/add
+Disallow: /news/add
+Disallow:

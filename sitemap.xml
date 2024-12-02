@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+        <url>
+            <loc>http://ediary.web-prj.ru/news/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+	<url>
+            <loc>http://ediary.web-prj.ru/news/add/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+	<url>
+            <loc>http://ediary.web-prj.ru/users/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+	<url>
+            <loc>http://ediary.web-prj.ru/users/login/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+	<url>
+            <loc>http://ediary.web-prj.ru/users/logout/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+	<url>
+            <loc>http://ediary.web-prj.ru/users/registration/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+	<url>
+            <loc>http://ediary.web-prj.ru/diary/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+	<url>
+            <loc>http://ediary.web-prj.ru/diary/add/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+	<url>
+            <loc>http://ediary.web-prj.ru/about/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+	<url>
+            <loc>http://ediary.web-prj.ru/schedule/</loc>
+            <lastmod>2024-11-28</lastmod>
+        </url>
+    </urlset>
