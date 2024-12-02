@@ -17,14 +17,14 @@
                 
                     <nav class="col-6 d-flex justify-content-around">
                         <a href="/news/">Новости</a>
-                        <a href="/schedule/">Расписание</a>
+                        <a href="/schedule/">Команда</a>
                         <a href="/diary/">Дневник</a>
                         <a href="/about/">Про нас</a>
                     </nav>
                 
                     <div class="authentication col-4 d-flex justify-content-around">
                         {% if user.is_authenticated %}
-                            <a href="/users/profile/" class="mr-2">{{ user.email }}</a>
+                            <a href="/" class="mr-2">{{ user.email }}</a>
                             <a href="/users/logout/" class="mr-2">Выйти</a>
                         {% else %}
                             <a href="/users/login/" class="mr-2">Войти</a>

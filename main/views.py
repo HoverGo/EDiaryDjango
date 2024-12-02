@@ -19,7 +19,7 @@ def about(request):
 
 def schedule(request):
     data = {
-        "title": "Расписание",
+        "title": "Команда",
     }
     return render(request, "main/schedule.html", data)
 
