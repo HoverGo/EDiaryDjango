@@ -168,10 +168,24 @@ main .contact_info {
     font-size: 10px;
 }
 
-
 footer {
     background-color: rgb(95, 93, 91);
     padding: 45px 0 34px;
+}
+
+footer .footer_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .footer_row .active__users {
+    color: black;
+}
+
+footer .footer_row .active__users p {
+    font-size: 20px;
+    text-align: right;
 }
 
 footer .logo a {

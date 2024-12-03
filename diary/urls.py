@@ -8,5 +8,5 @@ urlpatterns = [
     path("", diary, name="diary"),
     path("<int:id>/", diary_record, name="diary_record"),
     path("<int:id>/delete/", delete_diary_record, name="delete_diary_record"),
-    path("add/", diary_add, name="diary_add")
+    path("add/", diary_add, name="diary_add"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

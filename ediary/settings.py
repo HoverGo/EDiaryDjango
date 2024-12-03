@@ -65,7 +65,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "ediary.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -125,3 +124,7 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "users.User"
+
+# Время в секундах, которое сессия будет активна без активности пользователя
+SESSION_COOKIE_AGE = 3600  # 1 час (3600 секунд)
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
