@@ -9,15 +9,21 @@
     новость, статья, удаление статьи, новости сайта, контент, информация
 {% endblock keywords %}
 
-
 {% block main %}
-    <div class="features">
-        <h1>{{ news.name }}</h1>
-
-        <h2>{{ news.title }}</h2>
-        <br>
-        <p>{{ news.text }}</p>
-        <a href="/news/"><button class="btn btn-warning">Назад</button></a>
-        <a href="delete/"><button class="btn btn-danger">Удалить статью</button></a>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 col-12">
+            <div class="features">
+                <h1>{{ news.name }}</h1>
+                <h2>{{ news.title }}</h2>
+                <br>
+                <p>{{ news.text }}</p>
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="/news/" class="btn btn-warning">Назад</a>
+                    <a href="delete/" class="btn btn-danger">Удалить статью</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 {% endblock main %}

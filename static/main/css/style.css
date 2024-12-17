@@ -47,62 +47,137 @@ header .header div a:hover {
     border-bottom: 1px solid;
 }
 
-main .pg-404 {
-    width: 75%;
-    margin: 0 auto;
+.pg-404 {
+    margin: 50px auto;
+    padding: 20px;
 }
 
-main .pg-404 h1 {
-    text-align: center;
+.pg-404 h1 {
+    font-size: 2.5rem; /* Увеличенный размер заголовка */
+    color: #333;
+}
+
+.pg-404 p {
+    font-size: 1.25rem;
+    color: #555;
 }
 
 main .container {
     min-height: 100vh;
 }
 
-main .main_page {
-    text-align: center;
-    font-size: 25px;
+.main_page {
+    padding: 20px;
 }
 
-main .main_page li {
+.main_page ul {
     list-style-type: none;
+    padding-left: 0;
 }
 
-main .users_login {
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
-    padding: 50px 10px;
-    width: 350px;
-    margin: 100px auto;
+.main_page li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-main .users_registration {
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
-    padding: 50px 10px;
-    width: 350px;
-    margin: 100px auto;
+.users_login {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.users_login form .form-label {
+    font-weight: bold;
+}
+
+.text-danger {
+    color: red;
+}
+
+/* Стилевое улучшение для контейнера */
+.users_registration {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Обновлено выравнивание заголовка */
+.users_registration h1 {
+    font-size: 1.5rem; /* Можно изменить размер, если нужно */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Стиль для полей формы */
+.users_registration form .form-label {
+    font-weight: bold;
+}
+
+/* Стиль для ошибок */
+.text-danger {
+    color: red;
 }
 
 main .users_login .login_form {
     margin: 0 auto;
 }
 
-main .users_registration .registration_form {
-    margin: 0 auto;
+.features {
+    padding: 20px;
 }
 
-main .features {
-    padding: 10px 0 10px;
-    text-align: center;
+.features .form-label {
+    font-size: 1.1rem;
 }
 
-/* main .add_news {
-    margin-top: 75px;
-} */
+.features .form-control {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.features h1, .features h2 {
+    color: #333;
+}
+
+.features p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.features .btn {
+    width: 48%; /* Обеспечивает, что кнопки займут почти всю ширину, оставляя небольшие отступы */
+}
+
+.news_card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news_card h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.news_card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Добавим немного отступов для кнопки */
+.news_card .btn {
+    margin-top: 10px;
+}
 
 main .add_news .add_btn {
     display: flex;
@@ -110,73 +185,99 @@ main .add_news .add_btn {
     margin:0 auto;
 }
 
-main .schedule h1 {
-    text-align: center;
+.schedule {
+    padding: 20px;
 }
 
-main .schedule .team_img {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-
+.team_img img {
+    max-width: 100%;
+    height: auto;
 }
 
-main .columns-3 {  
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 75%;
-    min-height: 150px;
-    padding-top: 30px;
-}
-
-main .columns-3 .item_columns {
-    flex: 1 1 calc(33.33% - 10px);
-    padding-top: 65px;
-    padding-bottom: 65px;
-    outline: 4px solid black;
-    outline-offset: -30px;
-}
-
-main .add_diary_record {
+.add_diary_record {
     display: flex;
     justify-content: center;
     margin: 0 auto;
 }
 
-main .columns-3 .item_columns h1 {
-    font-size: 25px;
-    text-align: center;
+.columns-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
 }
 
-main .need_authenticate {
-    text-align: center;
+.item_columns {
+    text-decoration: none;
 }
 
-main .need_authenticate h1 {
+.record-card {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.record-card:hover {
+    transform: scale(1.05);
+}
+
+.record-card h2 {
+    font-size: 1.25rem;
     font-weight: bold;
-    font-size: 23px;
+    color: #333;
 }
 
-main .need_authenticate h2 {
-    font-size: 19px;
+.record-card p {
+    font-size: 1rem;
+    color: #666;
 }
 
-main .contact_info {
-    padding-left: 257px;
-    font-size: 10px;
+.record-card .btn {
+    margin-top: 10px;
 }
+
+/* Кнопка добавления записи */
+.add_btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.contact_info {
+    padding: 20px 10px;
+    background-color: #f9f9f9; /* Светлый фон для блока */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для блока */
+}
+
+.contact_details h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact_details .contact_text {
+    font-size: 1.25rem;
+    color: #555;
+    line-height: 1.5;
+}
+
 
 footer {
-    background-color: rgb(95, 93, 91);
-    padding: 45px 0 34px;
+    background-color: rgb(95, 93, 91); /* Цвет фона */
+    padding: 20px 0; /* Отступы сверху и снизу */
+    color: white; /* Цвет текста */
+    text-align: center; /* Текст по центру на маленьких экранах */
 }
 
 footer .footer_row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; 
+    flex-wrap: wrap; /* Позволяет элементам переноситься */
+    justify-content: space-between; /* Распределение по краям */
+    align-items: center; /* Центрирование по вертикали */
 }
 
 footer .footer_row .active__users {
@@ -185,7 +286,15 @@ footer .footer_row .active__users {
 
 footer .footer_row .active__users p {
     font-size: 20px;
-    text-align: right;
+}
+
+footer .logo img {
+    max-width: 100px; /* Ограничиваем размер логотипа */
+    height: auto;
+}
+
+footer .active__users {
+    text-align: right; /* По умолчанию центрирование */
 }
 
 footer .logo a {
@@ -195,9 +304,168 @@ footer .logo a {
 footer div figcaption{
     font-size: 1.125rem;
     line-height: 25px;
-    display: flex;
     align-items: center;
     padding-top: 15px;
 
     color: black;
+}
+
+.authentication {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /* Это гарантирует, что элементы будут в строку */
+    align-items: center; /* Для вертикального выравнивания */
+    gap: 10px; /* Отступы между элементами */
+}
+
+.authentication a {
+    margin-right: 10px; /* Добавляем небольшой отступ справа */
+}
+
+.auth-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .logo figure {
+    text-align: center; /* Центрирует содержимое figure */
+    margin: 0; /* Убирает лишние отступы */
+}
+
+footer .logo figcaption {
+    text-align: center; /* Центрирует текст внутри figcaption */
+    margin-top: 10px; /* Добавляет небольшой отступ сверху */
+    font-size: 1rem; /* Настройка размера шрифта */
+    line-height: 1.4;
+    color: black; /* Цвет текста для контраста */
+}
+
+
+@media (max-width: 576px) {
+    .users_login {
+        padding: 15px;
+    }
+
+    .users_registration {
+        padding: 15px;
+    }
+
+    .users_registration h1 {
+        font-size: 1.25rem; /* Уменьшаем размер заголовка на мобильных */
+    }
+
+    .pg-404 h1 {
+        font-size: 1.8rem; /* Уменьшаем заголовок */
+    }
+
+    .pg-404 p {
+        font-size: 1rem; /* Уменьшаем текст */
+    }
+
+    .pg-404 a.btn {
+        font-size: 0.9rem;
+        padding: 10px 20px; /* Компактная кнопка */
+    }
+
+    .features .btn {
+        width: 100%; /* На мобильных устройствах кнопки будут занимать всю ширину */
+        margin-bottom: 10px;
+    }
+
+    .news_card .btn {
+        width: 100%;
+    }
+
+    .main_page {
+        text-align: center; /* Центрирует текст внутри всего блока */
+    }
+    
+    .main_page ul {
+        display: inline-block; /* Позволяет списку центрироваться */
+        text-align: center; /* Чтобы текст элементов списка был выровнен по левому краю */
+        padding-left: 0; /* Убирает стандартный отступ списка */
+        margin: 0 auto; /* Центрирует сам список */
+        list-style-position: inside; /* Если хотите, чтобы маркеры были внутри списка */
+    }
+    
+    .main_page li {
+        font-size: 1.2rem; /* Для лучшей читаемости текста */
+    }
+    
+    .schedule h1 {
+        font-size: 1.5rem;
+    }
+
+    .features h1 {
+        font-size: 1.5rem;
+    }
+    .features .form-control {
+        font-size: 0.9rem;
+    }
+
+    .columns-3 {
+        grid-template-columns: 1fr; /* На мобильных устройствах показывать по одной записи */
+    }
+
+    .add_diary_record {
+        margin: 10px 0;
+    }
+
+    .add_btn {
+        width: 100%; /* Кнопка будет на всю ширину */
+        font-size: 14px;
+    }
+
+    .need_authenticate h1 {
+        font-size: 20px;
+    }
+
+    .need_authenticate h2 {
+        font-size: 18px;
+    }
+
+    .record-card h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        text-align: center;  /* Центрирование логотипа на мобильных */
+    }
+    
+    .authentication {
+        justify-content: center;
+        flex-direction: column; /* Размещение элементов вертикально */
+    }
+
+    .authentication a {
+        margin-bottom: 10px; /* Отступ между кнопками */
+    }
+
+    .authentication .auth-links {
+        align-items: center;
+    }
+    
+    .header .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer_row .active__users p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 768px) {
+    footer .active__users {
+        text-align: right; /* Выравнивание по правому краю на больших экранах */
+    }
+}
+
+.red-text {
+    color: red; /* Цвет ошибок формы */
+    font-size: 14px;
 }

@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 
-
-{% block title %}{{ title}}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 {% block description %}
     Узнайте больше о нашей компании, миссии и ценностях. Мы стремимся предоставлять лучшие услуги и продукты.
 {% endblock description %}
@@ -10,12 +9,20 @@
     о нас, информация о компании, миссия, ценности, о компании, команда
 {% endblock keywords %}
 
-
-
 {% block main %}
-    <div class="contact_info">
-        <h1>Наши контакты:</h1>
-        <h2>Номер телефона: 8-902-141-12-36</h2>
-        <h2>Адрес: Ул. Перекопская, д. 15а</h2>
+    <div class="contact_info container">
+        <h1 class="text-center mb-4">Наши контакты:</h1>
+        <div class="contact_details row justify-content-center text-center">
+            <!-- Номер телефона -->
+            <div class="col-12 col-md-6 mb-3">
+                <h2 class="mb-2">Номер телефона:</h2>
+                <p class="contact_text">8-902-141-12-36</p>
+            </div>
+            <!-- Адрес -->
+            <div class="col-12 col-md-6">
+                <h2 class="mb-2">Адрес:</h2>
+                <p class="contact_text">Ул. Перекопская, д. 15а</p>
+            </div>
+        </div>
     </div>
 {% endblock %}

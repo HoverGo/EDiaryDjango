@@ -9,18 +9,32 @@
     добавление статьи, создание статьи, форма добавления, публикация статьи, контент, блог
 {% endblock keywords %}
 
-
 {% block main %}
     <div class="features">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.name }}<br>
-            {{ form.title }}<br>
-            {{ form.text }}<br>
-            <button class="btn btn-success mt-3" type="submit">Добавить статью</button>
-
-        </form>
-
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-sm-10 col-12"> <!-- Responsive column -->
+                    <h1 class="text-center mb-4">Добавить статью</h1>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Название статьи</label>
+                            {{ form.name }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Заголовок</label>
+                            {{ form.title }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="text" class="form-label">Содержание</label>
+                            {{ form.text }}
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-success mt-3 w-100" type="submit">Добавить статью</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
 {% endblock %}

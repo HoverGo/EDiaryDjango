@@ -9,22 +9,28 @@
     новости, статьи, добавление статьи, последние новости, актуальные новости, сайт новостей
 {% endblock keywords %}
 
-
-
 {% block main %}
-<div class="add_news"><a href="add/" class="add_btn"><button class="add_btn btn btn-warning">Добавить новую статью</button></a></div>
-{% for el in news %}
-    <div class="features">
-        <h1>{{ el.name }}</h1>
-
-        <p>{{ el.title }}</p>
-        <a href={{ el.id }}/><button class="btn btn-success">Подробнее...</button></a>
-
-        
-    
-    
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <a href="add/" class="add_btn">
+                <button class="btn btn-warning">Добавить новую статью</button>
+            </a>
+        </div>
     </div>
-    {% endfor %}
-    
 
+    <div class="row">
+        {% for el in news %}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="news_card p-3 border rounded shadow-sm">
+                <h2>{{ el.name }}</h2>
+                <p>{{ el.title }}</p>
+                <a href="{{ el.id }}/">
+                    <button class="btn btn-success">Подробнее...</button>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

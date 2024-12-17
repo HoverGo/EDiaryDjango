@@ -9,14 +9,16 @@
     запись в дневнике, личный дневник, удалить запись, редактирование записи, заметки, дневник пользователя
 {% endblock keywords %}
 
-
-
 {% block main %}
-    <div class="features">
-        <h1>{{ record.name }}</h1>
-        <br>
-        <p>{{ record.text }}</p>
-        <a href="/diary/"><button class="btn btn-warning">Назад</button></a>
-        <a href="delete/"><button class="btn btn-danger">Удалить запись</button></a>
+    <div class="container mt-4">
+        <div class="features">
+            <h1 class="text-center">{{ record.name }}</h1>
+            <br>
+            <p class="lead">{{ record.text }}</p>
+            <div class="text-center mt-4">
+                <a href="/diary/" class="btn btn-warning w-100 mb-3 mb-sm-0">Назад</a>
+                <a href="delete/" class="btn btn-danger w-100">Удалить запись</a>
+            </div>
+        </div>
     </div>
 {% endblock main %}

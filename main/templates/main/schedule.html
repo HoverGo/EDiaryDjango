@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 {% load static %}
 
-
 {% block title %}{{ title }}{% endblock %}
 
 {% block main %}
     <div class="schedule">
-        <h1>Команда разработчиков</h1>
-        <div class="team_img"><img src="{% static 'main/img/it-team.jpg' %}" alt="team_img"></div>
+        <h1 class="text-center mb-4">Команда разработчиков</h1>
+        <div class="team_img text-center">
+            <img src="{% static 'main/img/it-team.jpg' %}" alt="team_img" class="img-fluid">
+        </div>
     </div>
 {% endblock %}

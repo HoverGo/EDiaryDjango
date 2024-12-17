@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}{{ title }}{% endblock title %}
+{% block title %}{{ title }}{% endblock %}
 {% block description %}
     Управляйте вашими записями в личном дневнике. Добавляйте новые записи и просматривайте существующие, чтобы сохранить важные моменты вашей жизни.
 {% endblock description %}
@@ -9,23 +9,28 @@
     личный дневник, записи в дневнике, добавить запись, дневник, сохранение записей, авторизация, личные записи
 {% endblock keywords %}
 
-
 {% block main %}
     {% if user.is_authenticated %}
-        <div class="add_diary_record">
-            <a href="add/" class="add_btn"><button class="add_btn btn btn-warning">Добавить новую запись в дневник</button></a>
+        <div class="add_diary_record mb-5">
+            <a href="add/" class="add_btn">
+                <button class="add_btn btn btn-warning w-100">Добавить новую запись в дневник</button>
+            </a>
         </div>
-        <div class="columns-3">
+        <div class="row">
             {% for record in records %}
-                <a class="item_columns" href="{{ record.id }}/">
-                    <div >
-                        <h1>{{ record.name }}</h1>
-                    </div>
-                </a>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="record-card p-3 border rounded shadow-sm">
+                    <h2>{{ record.name }}</h2>
+                    <p>{{ record.description }}</p>
+                    <a href="{{ record.id }}/">
+                        <button class="btn btn-success">Подробнее...</button>
+                    </a>
+                </div>
+            </div>
             {% endfor %}
         </div>
     {% else %}
-        <div class="need_authenticate">
+        <div class="need_authenticate text-center">
             <h1>Для использования данного функционала необходима авторизация</h1>
             <h2><a href="/users/login/">Авторизация</a></h2>
         </div>

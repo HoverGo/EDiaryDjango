@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 
-
-{% block title %}{{ title }}{% endblock title %}
+{% block title %}{{ title }}{% endblock %}
 {% block description %}
     Добавьте новую запись в ваш личный дневник. Введите название и содержание, чтобы сохранить важные моменты.
 {% endblock description %}
@@ -10,16 +9,31 @@
     добавить запись, личный дневник, новая запись, сохранить заметки, текстовые записи, дневник пользователя
 {% endblock keywords %}
 
-
 {% block main %}
     <div class="features">
-        <form method="post">
-            {% csrf_token %}<br>
-            {{ form.name }}<br>
-            {{ form.text }}<br>
-            {{ error }}<br>
-            <button class="btn btn-success mt-3" type="submit">Добавить запись в дневник</button>
-        </form>
-
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-sm-10 col-12">
+                    <h1 class="text-center mb-4">Добавить запись в дневник</h1>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Название записи</label>
+                            {{ form.name }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="text" class="form-label">Содержание</label>
+                            {{ form.text }}
+                        </div>
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error }}</div>
+                        {% endif %}
+                        <div class="text-center">
+                            <button class="btn btn-success mt-3 w-100" type="submit">Добавить запись в дневник</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-{% endblock main %}
+{% endblock %}
