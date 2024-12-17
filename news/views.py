@@ -16,23 +16,28 @@ def news(request):
 
 
 def news_add(request):
-    error = ""
-    if request.method == "POST":
-        form = NewsForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("news")
-        else:
-            error = "Неверная форма"
+    user = request.user
 
-    form = NewsForm()
+    if user.is_superuser:
+        error = ""
+        if request.method == "POST":
+            form = NewsForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect("news")
+            else:
+                error = "Неверная форма"
 
-    data = {
-        "title": "Добавить новость",
-        "form": form,
-        "error": error,
-    }
-    return render(request, "news/news_add.html", data)
+        form = NewsForm()
+
+        data = {
+            "title": "Добавить новость",
+            "form": form,
+            "error": error,
+        }
+        return render(request, "news/news_add.html", data)
+    else:
+        return render(request, "main/index.html", data)
 
 
 def news_details(request, id):
